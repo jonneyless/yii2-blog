@@ -1,0 +1,8 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: http://www.blog.com
+            browser: firefox
+        - Yii2:
+            part: init
