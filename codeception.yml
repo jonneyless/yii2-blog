@@ -1,8 +1,8 @@
 # global codeception file to run tests from all apps
 include:
     - common
-    - apps/frontend
-    - apps/backend
+    - apps/home
+    - apps/admin
 paths:
     log: apps/console/runtime/logs
 settings:

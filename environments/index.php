@@ -32,50 +32,50 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'apps/backend/runtime',
-            'apps/frontend/runtime',
-            'apps/backend/assets',
-            'apps/frontend/assets',
+            'apps/admin/runtime',
+            'apps/home/runtime',
+            'apps/admin/assets',
+            'apps/home/assets',
         ],
         'setExecutable' => [
             'yii',
             'yii_test',
         ],
         'setCookieValidationKey' => [
-            'apps/backend/config/main-local.php',
-            'apps/frontend/config/main-local.php',
+            'apps/admin/config/main-local.php',
+            'apps/home/config/main-local.php',
         ],
     ],
     'Testing' => [
         'path' => 'test',
         'setWritable' => [
-            'apps/backend/runtime',
-            'apps/frontend/runtime',
-            'apps/backend/assets',
-            'apps/frontend/assets',
+            'apps/admin/runtime',
+            'apps/home/runtime',
+            'apps/admin/assets',
+            'apps/home/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
-            'apps/backend/config/main-local.php',
-            'apps/frontend/config/main-local.php',
+            'apps/admin/config/main-local.php',
+            'apps/home/config/main-local.php',
         ],
     ],
     'Production' => [
         'path' => 'prod',
         'setWritable' => [
-            'apps/backend/runtime',
-            'apps/frontend/runtime',
-            'apps/backend/assets',
-            'apps/frontend/assets',
+            'apps/admin/runtime',
+            'apps/home/runtime',
+            'apps/admin/assets',
+            'apps/home/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
-            'apps/backend/config/main-local.php',
-            'apps/frontend/config/main-local.php',
+            'apps/admin/config/main-local.php',
+            'apps/home/config/main-local.php',
         ],
     ],
 ];
