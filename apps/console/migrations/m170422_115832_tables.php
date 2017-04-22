@@ -20,6 +20,7 @@ class m170422_115832_tables extends Migration
             'child' => $this->smallInteger(1)->unsigned()->notNull()->defaultValue(0)->comment('是否有子级'),
             'parent_arr' => $this->string()->notNull()->defaultValue(0)->comment('父级链'),
             'child_arr' => $this->text()->comment('子级群'),
+            'sort' => $this->bigInteger()->unsigned()->notNull()->defaultValue(0)->comment('排序'),
             'status' => $this->smallInteger(1)->unsigned()->notNull()->defaultValue(0)->comment('状态'),
         ], $tableOptions . ' COMMENT="分类"');
         $this->createIndex('category-parent', '{{%category}}', 'parent_id');

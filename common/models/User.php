@@ -4,36 +4,29 @@ namespace common\models;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 
 /**
- * User model
+ * 用户
  *
- * @property integer $id
+ * @property string $id
  * @property string $username
+ * @property string $auth_key
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
- * @property string $auth_key
+ * @property string $created_at
+ * @property string $updated_at
+ * @property integer $is_admin
  * @property integer $status
- * @property integer $created_at
- * @property integer $updated_at
  * @property string $password write-only password
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends namespace\base\User implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
-
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%user}}';
-    }
+    const STATUS_DELETED = 0;   // 删除
+    const STATUS_BANED = 1;     // 禁用
+    const STATUS_ACTIVE = 9;    // 启用
 
     /**
      * @inheritdoc
@@ -50,10 +43,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function rules()
     {
-        return [
+        return ArrayHelper::merge(parent::rules(), [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-        ];
+            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_BANED, self::STATUS_DELETED]],
+        ]);
     }
 
     /**
