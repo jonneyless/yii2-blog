@@ -24,6 +24,9 @@ use yii\web\IdentityInterface;
  */
 class User extends namespace\base\User implements IdentityInterface
 {
+    const IS_ADMIN_NO = 0;      // 用户
+    const IS_ADMIN_YES = 9;     // 管理员
+
     const STATUS_DELETED = 0;   // 删除
     const STATUS_BANED = 1;     // 禁用
     const STATUS_ACTIVE = 9;    // 启用
