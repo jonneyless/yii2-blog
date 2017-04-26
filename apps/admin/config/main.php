@@ -45,6 +45,13 @@ return [
             ],
         ],
         */
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@vendor/jonneyless/yii2-admin-asset/views',
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

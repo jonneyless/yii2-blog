@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "68707cc53c015c88332d163b457d3775",
+    "content-hash": "a19bf8b101dc2d139390d6e80e0edee4",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -54,6 +54,78 @@
                 "responsive",
                 "web"
             ]
+        },
+        {
+            "name": "bower-asset/fontawesome",
+            "version": "v4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/a8386aae19e200ddb0f6845b5feeee5eb7013687",
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "less/font-awesome.less",
+                    "scss/font-awesome.scss"
+                ],
+                "bower-asset-ignore": [
+                    "*/.*",
+                    "*.json",
+                    "src",
+                    "*.yml",
+                    "Gemfile",
+                    "Gemfile.lock",
+                    "*.md"
+                ]
+            },
+            "license": [
+                "OFL-1.1",
+                "MIT",
+                "CC-BY-3.0"
+            ],
+            "description": "Font Awesome"
+        },
+        {
+            "name": "bower-asset/jasny-bootstrap",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasny/bootstrap.git",
+                "reference": "f4705f17fcae6eff441f8b582d6eb72ce9109fc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasny/bootstrap/zipball/f4705f17fcae6eff441f8b582d6eb72ce9109fc6",
+                "reference": "f4705f17fcae6eff441f8b582d6eb72ce9109fc6",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap": ">=3.1.0",
+                "bower-asset/jquery": ">=1.9.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./dist/css/jasny-bootstrap.css",
+                    "./dist/js/jasny-bootstrap.js"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "_config.yml",
+                    "CNAME",
+                    "composer.json",
+                    "CONTRIBUTING.md",
+                    "docs",
+                    "js/tests"
+                ]
+            }
         },
         {
             "name": "bower-asset/jquery",
@@ -147,6 +219,52 @@
             ]
         },
         {
+            "name": "bower-asset/pace",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HubSpot/pace.git",
+                "reference": "c6846cbf6b928e9903b569269fa9fbf32f2554f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HubSpot/pace/zipball/c6846cbf6b928e9903b569269fa9fbf32f2554f4",
+                "reference": "c6846cbf6b928e9903b569269fa9fbf32f2554f4",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "pace.js",
+                "bower-asset-ignore": [
+                    ".*",
+                    "Gruntfile.coffee",
+                    "bower_components",
+                    "docs",
+                    "node_modules",
+                    "package.json",
+                    "templates",
+                    "tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatic page load progress bar",
+            "keywords": [
+                "activity",
+                "ajax",
+                "automatic",
+                "bar",
+                "client-side",
+                "load",
+                "loading",
+                "pageload",
+                "progress",
+                "progress",
+                "spinner"
+            ]
+        },
+        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "source": {
@@ -173,6 +291,44 @@
                     "package.json"
                 ]
             }
+        },
+        {
+            "name": "bower-asset/summernote",
+            "version": "v0.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/summernote/summernote.git",
+                "reference": "f6c2d1c42b9911ec41a63dd75adbb65def86ece8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/summernote/summernote/zipball/f6c2d1c42b9911ec41a63dd75adbb65def86ece8",
+                "reference": "f6c2d1c42b9911ec41a63dd75adbb65def86ece8",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap": ">=3.0.1",
+                "bower-asset/jquery": ">=1.9.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./dist/summernote.js",
+                    "./dist/summernote.css"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "Gruntfile.js",
+                    "MAINTAIN.md",
+                    "grunts",
+                    "node_modules",
+                    "bower_components",
+                    "test"
+                ]
+            },
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -373,18 +529,58 @@
             "time": "2015-09-19T16:54:05+00:00"
         },
         {
+            "name": "jonneyless/yii2-admin-asset",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "D:\\Htdocs\\jonneyless\\yii2-admin-asset\\",
+                "reference": "81a1685e1846430b992e9e757bb4433c8073115f"
+            },
+            "require": {
+                "bower-asset/fontawesome": "^4.7.0",
+                "bower-asset/jasny-bootstrap": "^3.1.3",
+                "bower-asset/pace": "^1.0",
+                "bower-asset/summernote": "^0.8.3",
+                "onokumus/metismenu": "^2.7.0",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": ">=2.0.6"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "ijony\\admin\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jony",
+                    "email": "jonneyless@163.com"
+                }
+            ],
+            "description": "Yii2 Admin Template Asset",
+            "homepage": "https://github.com/jonneyless/yii2-admin-asset",
+            "keywords": [
+                "admin",
+                "asset",
+                "jonneyless",
+                "template",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://github.com/jonneyless/yii2-admin-asset.git"
+            },
+            "time": "2017-04-25 16:11:46"
+        },
+        {
             "name": "jonneyless/yii2-helper-extend",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jonneyless/yii2-helper-extend.git",
-                "reference": "44d16599bf677af109cd71110798a4a07f0285f4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/jonneyless/yii2-helper-extend/44d16599bf677af109cd71110798a4a07f0285f4.zip",
-                "reference": "44d16599bf677af109cd71110798a4a07f0285f4",
-                "shasum": ""
+                "url": "D:\\Htdocs\\jonneyless\\yii2-helper-extend\\",
+                "reference": "e838ac1da62e03afdde8e71d53c111de91225283"
             },
             "require": {
                 "php": ">=5.4.0",
@@ -397,7 +593,6 @@
                     "ijony\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -414,7 +609,52 @@
                 "jonneyless",
                 "yii2"
             ],
-            "time": "2017-04-22 10:36:09"
+            "support": {
+                "source": "https://github.com/jonneyless/yii2-helper-extend.git"
+            },
+            "time": "2017-04-25 18:45:07"
+        },
+        {
+            "name": "onokumus/metismenu",
+            "version": "v2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onokumus/metismenu.git",
+                "reference": "412043318ac2cf5c589154d6042d7ac45fffc0be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/onokumus/metismenu/412043318ac2cf5c589154d6042d7ac45fffc0be.zip",
+                "reference": "412043318ac2cf5c589154d6042d7ac45fffc0be",
+                "shasum": ""
+            },
+            "suggest": {
+                "components/jquery": ">=1.9"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Osman Nuri Okumus",
+                    "email": "onokumus@gmail.com",
+                    "homepage": "http://onokumus.com"
+                }
+            ],
+            "description": "A jQuery menu plugin",
+            "homepage": "https://github.com/onokumus/metisMenu",
+            "keywords": [
+                "JS",
+                "bootstrap",
+                "css",
+                "jquery",
+                "menu",
+                "plugin",
+                "web"
+            ],
+            "time": "2017-03-08T16:25:10+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3192,10 +3432,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "jonneyless/yii2-helper-extend": 20
-    },
+    "minimum-stability": "dev",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
