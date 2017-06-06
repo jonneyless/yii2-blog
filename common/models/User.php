@@ -182,4 +182,14 @@ class User extends namespace\base\User implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public function getRoleName()
+    {
+        return $this->checkIsAdmin() ? '管理员' : '访客';
+    }
+
+    public function checkIsAdmin()
+    {
+        return $this->is_admin == self::IS_ADMIN_YES;
+    }
 }
