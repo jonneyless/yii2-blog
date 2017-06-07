@@ -1,7 +1,6 @@
 <?php
 namespace admin\controllers;
 
-use ijony\admin\controllers\Controller;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
