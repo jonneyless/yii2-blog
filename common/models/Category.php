@@ -2,33 +2,27 @@
 
 namespace common\models;
 
+use ijony\helpers\Utils;
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * 日志分类
  *
- * @property string $id
- * @property string $parent_id
- * @property string $name
- * @property string $slug
- * @property integer $child
- * @property string $parent_arr
- * @property string $child_arr
- * @property integer $status
+ * @inheritdoc
  */
 class Category extends namespace\base\Category
 {
 
-    const STATUS_DELETE = 0;    // 删除
-    const STANUS_UNACTIVE = 1;  // 禁用
-    const STATUS_ACTIVE = 9;    // 启用
+    const STANUS_UNACTIVE = 0;    // 禁用
+    const STATUS_ACTIVE = 9;      // 启用
 
     public function rules()
     {
         return ArrayHelper::merge(parent::rules(), [
-            [['child', 'parent_id', 'parent_arr'], 'default', 'value' => 0],
+            [['child', 'parent_id', 'parent_arr', 'sort'], 'default', 'value' => 0],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_DELETE, self::STANUS_UNACTIVE, self::STATUS_ACTIVE]],
+            ['status', 'in', 'range' => [self::STANUS_UNACTIVE, self::STATUS_ACTIVE]],
         ]);
     }
 
@@ -174,5 +168,31 @@ class Category extends namespace\base\Category
         }
 
         static::deleteAll(['id' => $child_arr]);
+    }
+
+    public function getStatus()
+    {
+        $datas = $this->getStatusSelectDatas();
+
+        return isset($datas[$this->status]) ? $datas[$this->status] : '';
+    }
+
+    public function getStatusLabel()
+    {
+        if($this->status == self::STATUS_ACTIVE){
+            $class = 'label-primary';
+        }else{
+            $class = 'label-danger';
+        }
+
+        return Utils::label($this->getStatus(), $class);
+    }
+
+    public function getStatusSelectDatas()
+    {
+        return [
+            self::STANUS_UNACTIVE => '禁用',
+            self::STATUS_ACTIVE => '启用',
+        ];
     }
 }

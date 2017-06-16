@@ -14,6 +14,7 @@ use Yii;
  * @property integer $child
  * @property string $parent_arr
  * @property string $child_arr
+ * @property string $sort
  * @property integer $status
  */
 class Category extends \yii\db\ActiveRecord
@@ -32,7 +33,7 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['parent_id', 'child', 'status'], 'integer'],
+            [['parent_id', 'child', 'sort', 'status'], 'integer'],
             [['name'], 'required'],
             [['child_arr'], 'string'],
             [['name'], 'string', 'max' => 60],
@@ -54,6 +55,7 @@ class Category extends \yii\db\ActiveRecord
             'child' => '是否有子级',
             'parent_arr' => '父级链',
             'child_arr' => '子级群',
+            'sort' => '排序',
             'status' => '状态',
         ];
     }

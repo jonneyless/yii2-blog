@@ -23,9 +23,11 @@ class Controller extends \ijony\admin\controllers\Controller
                 ['name' => '消息', 'url' => ['message/create']],
             ]],
             ['name' => '管理', 'url' => '#', 'icon' => 'tasks', 'items' => [
-                ['name' => '日志', 'url' => 'post/index'],
-                ['name' => '消息', 'url' => 'message/index'],
-                ['name' => '反馈', 'url' => 'feedback/index'],
+                ['name' => '日志', 'url' => ['post/index']],
+                ['name' => '消息', 'url' => ['message/index']],
+                ['name' => '反馈', 'url' => ['feedback/index']],
+                ['name' => '分类', 'url' => ['category/index']],
+                ['name' => '标签', 'url' => ['tag/index']],
             ]],
             ['name' => '系统', 'url' => ['config/index'], 'icon' => 'cog'],
         ];

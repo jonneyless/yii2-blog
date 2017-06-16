@@ -10,16 +10,8 @@ use yii\web\IdentityInterface;
 /**
  * 用户
  *
- * @property string $id
- * @property string $username
- * @property string $auth_key
- * @property string $password_hash
- * @property string $password_reset_token
- * @property string $email
- * @property string $created_at
- * @property string $updated_at
- * @property integer $is_admin
- * @property integer $status
+ * @inheritdoc
+ *
  * @property string $password write-only password
  */
 class User extends namespace\base\User implements IdentityInterface

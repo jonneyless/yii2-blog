@@ -7,8 +7,7 @@ use Yii;
 /**
  * 日志与标签关联
  *
- * @property string $entry_id
- * @property string $tag_id
+ * @inheritdoc
  *
  * @property Entry $entry
  * @property Tag $tag

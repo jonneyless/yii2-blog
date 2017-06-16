@@ -8,10 +8,7 @@ use Yii;
 /**
  * 日志附件
  *
- * @property string $id
- * @property integer $type
- * @property string $name
- * @property string $file
+ * @inheritdoc
  *
  * @property EntryAttachment[] $entryAttachments
  * @property Entry[] $entries

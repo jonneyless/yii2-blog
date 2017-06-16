@@ -1,6 +1,7 @@
 <?php
 namespace admin\models;
 
+use common\models\Category;
 use Yii;
 
 /**
@@ -10,4 +11,9 @@ use Yii;
  */
 class Entry extends \common\models\Entry
 {
+
+    public function getCategorySelectDatas()
+    {
+        return Category::find()->select('name')->indexBy('id')->column();
+    }
 }
