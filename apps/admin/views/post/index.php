@@ -1,6 +1,6 @@
 <?php
 
-use mtweb\widgets\GridView;
+use ijony\admin\widgets\GridView;
 use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
