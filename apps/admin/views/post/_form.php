@@ -35,6 +35,7 @@ AppAsset::register($this);
         <?= $form->field($model, 'category_id')->dropDownList($model->getCategorySelectDatas()) ?>
         <?= $form->field($model, 'content')->editor() ?>
         <?= $form->field($model, 'trackback')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'tags')->tags(['maxlength' => true]) ?>
 
         <div class="form-group text-center">
             <?= Html::resetButton('重置', ['class' => 'btn btn-white']) ?>

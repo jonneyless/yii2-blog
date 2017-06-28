@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c650d11d9148eb469ddd139608b61ae9",
+    "content-hash": "9525d4cc7bf68c45f7e65aca709db1bc",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -160,16 +160,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.3.6",
+            "version": "3.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "e42852f4afa01a80815394a5b2f9ce504c1a8d0b"
+                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/e42852f4afa01a80815394a5b2f9ce504c1a8d0b",
-                "reference": "e42852f4afa01a80815394a5b2f9ce504c1a8d0b",
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/9835731cb78cac749734d94a1cb5bd70da4d3b10",
+                "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10",
                 "shasum": ""
             },
             "require": {
@@ -529,16 +529,16 @@
         },
         {
             "name": "jonneyless/yii2-admin-asset",
-            "version": "dev-master",
+            "version": "v0.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonneyless/yii2-admin-asset.git",
-                "reference": "0186a732e1c504a7e395a51b84799c397a2c9004"
+                "reference": "460d8d8dd87363235a715562b93aa5300f126c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/jonneyless/yii2-admin-asset/0186a732e1c504a7e395a51b84799c397a2c9004.zip",
-                "reference": "0186a732e1c504a7e395a51b84799c397a2c9004",
+                "url": "https://files.phpcomposer.com/files/jonneyless/yii2-admin-asset/460d8d8dd87363235a715562b93aa5300f126c4f.zip",
+                "reference": "460d8d8dd87363235a715562b93aa5300f126c4f",
                 "shasum": ""
             },
             "require": {
@@ -575,20 +575,20 @@
                 "template",
                 "yii2"
             ],
-            "time": "2017-05-14 02:16:46"
+            "time": "2017-06-13T08:26:07+00:00"
         },
         {
             "name": "jonneyless/yii2-helper-extend",
-            "version": "dev-master",
+            "version": "v0.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonneyless/yii2-helper-extend.git",
-                "reference": "8e5ba4dbb2285f1ab83da2971f586e6ca23cb339"
+                "reference": "ca28c94dbc220e390658a310f11b6b9ebd522970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/jonneyless/yii2-helper-extend/8e5ba4dbb2285f1ab83da2971f586e6ca23cb339.zip",
-                "reference": "8e5ba4dbb2285f1ab83da2971f586e6ca23cb339",
+                "url": "https://files.phpcomposer.com/files/jonneyless/yii2-helper-extend/ca28c94dbc220e390658a310f11b6b9ebd522970.zip",
+                "reference": "ca28c94dbc220e390658a310f11b6b9ebd522970",
                 "shasum": ""
             },
             "require": {
@@ -619,7 +619,7 @@
                 "jonneyless",
                 "yii2"
             ],
-            "time": "2017-04-26 14:36:51"
+            "time": "2017-06-28T06:25:07+00:00"
         },
         {
             "name": "onokumus/metismenu",
@@ -2041,16 +2041,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.2.1",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "16999a1e9a8a25d68f0ab8cc8ab818b043ad5374"
+                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/16999a1e9a8a25d68f0ab8cc8ab818b043ad5374.zip",
-                "reference": "16999a1e9a8a25d68f0ab8cc8ab818b043ad5374",
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/f2786490399836d2a544a34785c4a8d3ab32cf0e.zip",
+                "reference": "f2786490399836d2a544a34785c4a8d3ab32cf0e",
                 "shasum": ""
             },
             "require": {
@@ -2121,7 +2121,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-02T12:24:37+00:00"
+            "time": "2017-06-13T14:07:07+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2442,16 +2442,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3"
+                "reference": "74776f8dbc081cab9287c2a601c0c1d842568744"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/environment/02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3.zip",
-                "reference": "02b6b2c7aefe2cdb1185b8dbf8718b0bcedf3ab3",
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/environment/74776f8dbc081cab9287c2a601c0c1d842568744.zip",
+                "reference": "74776f8dbc081cab9287c2a601c0c1d842568744",
                 "shasum": ""
             },
             "require": {
@@ -2488,7 +2488,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-05-18T10:10:00+00:00"
+            "time": "2017-06-20T16:25:05+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -2885,7 +2885,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -2942,7 +2942,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -3011,7 +3011,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -3064,7 +3064,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -3120,7 +3120,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -3176,7 +3176,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -3239,7 +3239,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -3288,16 +3288,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/polyfill-mbstring/e79d363049d1c2128f133a2667e4f4190904f7f4.zip",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://files.phpcomposer.com/files/symfony/polyfill-mbstring/f29dca382a6485c3cbe6379f0c61230167681937.zip",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
                 "shasum": ""
             },
             "require": {
@@ -3309,7 +3309,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -3343,11 +3343,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T14:24:12+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -3641,8 +3641,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jonneyless/yii2-helper-extend": 20,
-        "jonneyless/yii2-admin-asset": 20
+        "jonneyless/yii2-helper-extend": 15,
+        "jonneyless/yii2-admin-asset": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,
