@@ -15,7 +15,7 @@ $this->params['buttons'] = [
 ?>
 
 <?php Pjax::begin() ?>
-<div class="ibox animated fadeInRight">
+<div class="ibox">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [

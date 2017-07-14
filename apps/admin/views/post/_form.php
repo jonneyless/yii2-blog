@@ -24,10 +24,7 @@ AppAsset::register($this);
         'fieldClass' => ActiveField::className(),
         'options'=>[
             'enctype'=>'multipart/form-data',
-            'class' => 'tabs-container animated fadeInRight',
-        ],
-        'fieldConfig' => [
-            'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
+            'class' => 'tabs-container',
         ],
     ]); ?>
 
