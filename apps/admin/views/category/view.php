@@ -23,7 +23,7 @@ $this->params['buttons'] = [
 ];
 ?>
 
-<div class="ibox animated fadeInRight">
+<div class="ibox">
     <div class="ibox-content">
 
     <?= DetailView::widget([

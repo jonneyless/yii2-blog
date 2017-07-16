@@ -13,7 +13,7 @@ $this->params['buttons'] = [
 ];
 ?>
 
-<div class="ibox animated fadeInRight">
+<div class="ibox">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'layoutFix' => true,

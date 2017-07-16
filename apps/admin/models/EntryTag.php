@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace admin\models;
 
 use Yii;
 
@@ -9,6 +9,6 @@ use Yii;
  *
  * @inheritdoc
  */
-class EntryTag extends namespace\base\EntryTag
+class EntryTag extends \common\models\EntryTag
 {
 }

@@ -9,9 +9,6 @@ use Yii;
  * 日志附件
  *
  * @inheritdoc
- *
- * @property EntryAttachment[] $entryAttachments
- * @property Entry[] $entries
  */
 class Attachment extends namespace\base\Attachment
 {

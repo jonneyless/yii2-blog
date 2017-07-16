@@ -15,6 +15,7 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
+        'js/common.js'
     ];
     public $depends = [
         'ijony\admin\assets\AppAsset',

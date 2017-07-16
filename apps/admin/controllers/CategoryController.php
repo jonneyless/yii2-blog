@@ -3,7 +3,7 @@
 namespace admin\controllers;
 
 use Yii;
-use common\models\Category;
+use admin\models\Category;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;

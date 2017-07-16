@@ -2,10 +2,6 @@
 
 namespace admin\models;
 
-use common\models\Attachment;
-use common\models\Category;
-use common\models\EntryAttachment;
-use common\models\EntryTag;
 use ijony\helpers\Image;
 use Yii;
 use yii\helpers\ArrayHelper;
