@@ -2,6 +2,7 @@
 
 namespace admin\controllers;
 
+use admin\assets\AppAsset;
 use Yii;
 
 /**
@@ -11,6 +12,16 @@ use Yii;
  */
 class Controller extends \ijony\admin\controllers\Controller
 {
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        AppAsset::register($this->view);
+    }
 
     /**
      * @inheritdoc

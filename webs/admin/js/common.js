@@ -2,7 +2,7 @@
  * Created by Jony on 2017/7/16.
  */
 
-$('[data-ajax=focus]').blur(function(){
+$('[data-ajax=blur]').blur(function(){
     var val = $(this).val();
     var url = $(this).attr('data-ajax-url');
     var target = $(this).attr('data-ajax-target');

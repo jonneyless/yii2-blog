@@ -19,7 +19,7 @@ use ijony\admin\widgets\ActiveField;
 
         <?= $form->field($model, 'name')->textInput([
             'maxlength' => true,
-            'data-ajax' => 'focus',
+            'data-ajax' => 'blur',
             'data-ajax-url' => \yii\helpers\Url::to(['ajax/get-slug']),
             'data-ajax-target' => Html::getInputId($model, 'slug')
         ]) ?>

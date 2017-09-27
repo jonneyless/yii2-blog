@@ -1,6 +1,6 @@
 <?php
 
-use ijony\admin\widgets\GridView;
+use ijony\admin\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -32,7 +32,7 @@ $this->params['buttons'] = [
             ],
 
             [
-                'class' => 'ijony\admin\widgets\ActionColumn',
+                'class' => 'ijony\admin\grid\ActionColumn',
                 'headerOptions' => [
                     'class' => 'text-right',
                 ],
