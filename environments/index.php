@@ -36,6 +36,7 @@ return [
             'apps/home/runtime',
             'apps/admin/assets',
             'apps/home/assets',
+            'apps/static',
         ],
         'setExecutable' => [
             'yii',
@@ -53,6 +54,7 @@ return [
             'apps/home/runtime',
             'apps/admin/assets',
             'apps/home/assets',
+            'apps/static',
         ],
         'setExecutable' => [
             'yii',
@@ -69,6 +71,7 @@ return [
             'apps/home/runtime',
             'apps/admin/assets',
             'apps/home/assets',
+            'apps/static',
         ],
         'setExecutable' => [
             'yii',
