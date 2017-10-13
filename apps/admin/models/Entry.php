@@ -119,4 +119,45 @@ class Entry extends \common\models\Entry
     {
         return Category::find()->select('name')->indexBy('id')->column();
     }
+
+    /**
+     * 获取状态表述
+     *
+     * @return mixed|string
+     */
+    public function getStatus()
+    {
+        $datas = $this->getStatusSelectDatas();
+
+        return isset($datas[$this->status]) ? $datas[$this->status] : '';
+    }
+
+    /**
+     * 获取状态标签
+     *
+     * @return mixed|string
+     */
+    public function getStatusLabel()
+    {
+        if($this->status == self::STATUS_ACTIVE){
+            $class = 'label-primary';
+        }else{
+            $class = 'label-danger';
+        }
+
+        return Utils::label($this->getStatus(), $class);
+    }
+
+    /**
+     * 获取完整状态数据
+     *
+     * @return array
+     */
+    public function getStatusSelectDatas()
+    {
+        return [
+            self::STANUS_UNACTIVE => '禁用',
+            self::STATUS_ACTIVE => '启用',
+        ];
+    }
 }

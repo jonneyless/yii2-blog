@@ -9,7 +9,6 @@ $this->title = '分类管理';
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['buttons'] = [
     ['label' => '新增', 'url' => ['create'], 'options' => ['class' => 'btn btn-success']],
-    ['label' => '回收站', 'url' => ['recycle'], 'options' => ['class' => 'btn btn-default']],
 ];
 ?>
 

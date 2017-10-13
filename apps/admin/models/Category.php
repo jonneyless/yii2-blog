@@ -14,6 +14,9 @@ use yii\helpers\ArrayHelper;
 class Category extends \common\models\Category
 {
 
+    /**
+     * @inheritdoc
+     */
     public function rules()
     {
         return ArrayHelper::merge(parent::rules(), [
@@ -23,6 +26,9 @@ class Category extends \common\models\Category
         ]);
     }
 
+    /**
+     * @inheritdoc
+     */
     public function beforeSave($insert)
     {
         if(!$insert){
@@ -36,11 +42,14 @@ class Category extends \common\models\Category
         return parent::beforeSave($insert);
     }
 
+    /**
+     * @inheritdoc
+     */
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
 
-        if($insert){
+        if($insert){ // 如果是插入操作，只更新父级分类的子集
             $this->child_arr = (string) $this->id;
 
             if($this->parent_id){
@@ -62,7 +71,7 @@ class Category extends \common\models\Category
             }
 
             $this->save();
-        }else{
+        }else{ // 如果是更新操作，判断是否修改了父级分类，如果是就从原来的所有父级的子集中移除，并添加到新的所有父级的子集中
             if(isset($changedAttributes['parent_id'])){
                 $child_arr = explode(",", $this->child_arr);
                 $old_parent_arr = $this->parent_arr;
@@ -123,6 +132,7 @@ class Category extends \common\models\Category
                 $this->save();
             }
 
+            // 如果更新了状态，同步到所有子级
             if(isset($changedAttributes['status'])){
                 if($this->child != 0){
                     static::updateAll(['status' => $this->status], ['parent_id' => $this->id]);
@@ -130,6 +140,7 @@ class Category extends \common\models\Category
             }
         }
 
+        // 如果更新了排序，更新所有父级的子集数据的排序
         if(isset($changedAttributes['sort'])){
             if($this->parent_id){
                 $parent = static::findOne($this->parent_id);
@@ -144,6 +155,9 @@ class Category extends \common\models\Category
         }
     }
 
+    /**
+     * @inheritdoc
+     */
     public function afterDelete()
     {
         parent::afterDelete();
@@ -167,6 +181,11 @@ class Category extends \common\models\Category
         static::deleteAll(['id' => $child_arr]);
     }
 
+    /**
+     * 获取状态表述
+     *
+     * @return mixed|string
+     */
     public function getStatus()
     {
         $datas = $this->getStatusSelectDatas();
@@ -174,6 +193,11 @@ class Category extends \common\models\Category
         return isset($datas[$this->status]) ? $datas[$this->status] : '';
     }
 
+    /**
+     * 获取状态标签
+     *
+     * @return mixed|string
+     */
     public function getStatusLabel()
     {
         if($this->status == self::STATUS_ACTIVE){
@@ -185,6 +209,11 @@ class Category extends \common\models\Category
         return Utils::label($this->getStatus(), $class);
     }
 
+    /**
+     * 获取完整状态数据
+     *
+     * @return array
+     */
     public function getStatusSelectDatas()
     {
         return [

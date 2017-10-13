@@ -51,6 +51,13 @@ class AjaxController extends Controller
         return $this->output($value);
     }
 
+    /**
+     * 输出
+     *
+     * @param $params
+     *
+     * @return string
+     */
     private function output($params)
     {
         if(is_array($params)){
@@ -63,6 +70,13 @@ class AjaxController extends Controller
         return Json::encode($return);
     }
 
+    /**
+     * 错误信息输出
+     *
+     * @param $params
+     *
+     * @return string
+     */
     private function error($params)
     {
         if(is_array($params)){
@@ -76,6 +90,13 @@ class AjaxController extends Controller
         return Json::encode($return);
     }
 
+    /**
+     * 成功信息输出
+     *
+     * @param $params
+     *
+     * @return string
+     */
     private function success($params)
     {
         if(is_array($params)){

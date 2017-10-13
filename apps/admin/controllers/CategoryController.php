@@ -31,6 +31,11 @@ class CategoryController extends Controller
         ];
     }
 
+    /**
+     * 分类列表
+     *
+     * @return string
+     */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
@@ -42,19 +47,17 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
+    /**
+     * 添加分类
+     *
+     * @return string|\yii\web\Response
+     */
     public function actionCreate()
     {
         $model = new Category();
 
         if($model->load(Yii::$app->request->post()) && $model->save()){
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('create', [
@@ -62,12 +65,19 @@ class CategoryController extends Controller
         ]);
     }
 
+    /**
+     * 编辑分类
+     *
+     * @param $id
+     *
+     * @return string|\yii\web\Response
+     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 
         if($model->load(Yii::$app->request->post()) && $model->save()){
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('update', [
@@ -75,13 +85,28 @@ class CategoryController extends Controller
         ]);
     }
 
+    /**
+     * 删除分类
+     *
+     * @param $id
+     *
+     * @return \yii\web\Response
+     */
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['recycle']);
+        return $this->redirect(['index']);
     }
 
+    /**
+     * 获取分类对象
+     *
+     * @param $id
+     *
+     * @return static
+     * @throws \yii\web\NotFoundHttpException
+     */
     protected function findModel($id)
     {
         if(($model = Category::findOne($id)) !== NULL){
