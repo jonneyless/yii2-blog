@@ -1,19 +1,17 @@
 <?php
 
-use ijony\admin\widgets\GridView;
-use yii\widgets\Pjax;
+use ijony\admin\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '商品管理';
+$this->title = '日志管理';
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['buttons'] = [
     ['label' => '新增', 'url' => ['create'], 'options' => ['class' => 'btn btn-success']],
 ];
 ?>
 
-<?php Pjax::begin() ?>
 <div class="ibox">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -32,7 +30,7 @@ $this->params['buttons'] = [
             ],
 
             [
-                'class' => 'mtweb\widgets\ActionColumn',
+                'class' => 'ijony\admin\grid\ActionColumn',
                 'headerOptions' => [
                     'class' => 'text-right',
                 ],
@@ -41,4 +39,3 @@ $this->params['buttons'] = [
         ],
     ]); ?>
 </div>
-<?php Pjax::end() ?>

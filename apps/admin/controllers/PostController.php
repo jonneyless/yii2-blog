@@ -4,6 +4,8 @@ namespace admin\controllers;
 
 use admin\models\Entry;
 use Yii;
+use yii\data\ActiveDataProvider;
+use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
 /**
