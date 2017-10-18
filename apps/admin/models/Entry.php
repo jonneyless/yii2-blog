@@ -3,7 +3,9 @@
 namespace admin\models;
 
 use ijony\helpers\Image;
+use ijony\helpers\Utils;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -19,8 +21,6 @@ class Entry extends \common\models\Entry
 
     // 标签合集
     public $tags;
-    // 正文内图片合集
-    private $imgs;
 
     /**
      * @inheritdoc
@@ -30,6 +30,16 @@ class Entry extends \common\models\Entry
         return ArrayHelper::merge(parent::rules(), [
             ['tags', 'safe'],
         ]);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
     }
 
     /**
@@ -50,7 +60,6 @@ class Entry extends \common\models\Entry
         $datas = Image::recoverImg($this->content);
 
         $this->content = $datas['content'];
-        $this->imgs = $datas['imgs'];
 
         return parent::beforeSave($insert);
     }
@@ -83,24 +92,7 @@ class Entry extends \common\models\Entry
             }
         }
 
-        if($this->imgs){
-            foreach($this->imgs as $img){
-                $imgInfo = pathinfo($img);
-
-                $attachment = new Attachment();
-                $attachment->type = Attachment::TYPE_IMAGE;
-                $attachment->name = $imgInfo['filename'];
-                $attachment->file = $img;
-                if($attachment->save()){
-                    $relation = new EntryAttachment();
-                    $relation->entry_id = $this->id;
-                    $relation->attachment_id = $attachment->id;
-                    if(!$relation->save()){
-                        $attachment->delete();
-                    }
-                }
-            }
-        }
+        Attachment::updateEntryFile($this->id, $this->content);
     }
 
     /**
@@ -108,7 +100,7 @@ class Entry extends \common\models\Entry
      */
     public function afterFind()
     {
-        $this->tags = $this->getTags()->select('name')->column();
+        $this->tags = join(",", $this->getTags()->select('name')->column());
     }
 
     /**

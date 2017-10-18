@@ -3,6 +3,7 @@
 namespace admin\controllers;
 
 use admin\models\Entry;
+use ijony\helpers\Utils;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
@@ -55,6 +56,7 @@ class PostController extends Controller
     public function actionCreate()
     {
         $model = new Entry();
+        $model->user_id = Yii::$app->user->id;
 
         if($model->load(Yii::$app->request->post()) && $model->save()){
             return $this->redirect(['index']);

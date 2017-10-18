@@ -2,7 +2,7 @@
 
 namespace admin\models;
 
-use ijony\helpers\String;
+use ijony\helpers\Utils;
 use Yii;
 
 /**
@@ -37,7 +37,7 @@ class Tag extends \common\models\Tag
         if(!$model){
             $model = new self();
             $model->name = $tag;
-            $model->slug = String::pinyin($tag);
+            $model->slug = Utils::pinyin()->permalink($tag);
             $model->save();
         }
 
