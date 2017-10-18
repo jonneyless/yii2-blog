@@ -49,6 +49,7 @@ class Entry extends \common\models\Entry
     {
         return ArrayHelper::merge(parent::attributeLabels(), [
             'tags' => '标签',
+            'status' => '发布',
         ]);
     }
 

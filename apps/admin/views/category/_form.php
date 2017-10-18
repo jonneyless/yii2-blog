@@ -25,7 +25,7 @@ use ijony\admin\widgets\ActiveField;
         ]) ?>
         <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
         <?= $form->field($model, 'sort')->textInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'status')->switchery(\common\models\Category::STATUS_ACTIVE) ?>
+        <?= $form->field($model, 'status')->switchery($model::STATUS_ACTIVE) ?>
 
         <div class="form-group">
             <div class="col-sm-6 col-sm-offset-3">

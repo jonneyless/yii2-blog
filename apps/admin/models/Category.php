@@ -29,6 +29,16 @@ class Category extends \common\models\Category
     /**
      * @inheritdoc
      */
+    public function attributeLabels()
+    {
+        return ArrayHelper::merge(parent::attributeLabels(), [
+            'status' => '启用',
+        ]);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function beforeSave($insert)
     {
         if(!$insert){

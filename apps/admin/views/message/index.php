@@ -5,7 +5,7 @@ use ijony\admin\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '日志管理';
+$this->title = '消息管理';
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['buttons'] = [
     ['label' => '新增', 'url' => ['create'], 'options' => ['class' => 'btn btn-success']],
@@ -20,7 +20,7 @@ $this->params['buttons'] = [
                 'attribute' => 'id',
                 'header' => '#',
             ],
-            'name',
+            'content',
             [
                 'attribute' => 'status',
                 'format' => 'raw',

@@ -9,9 +9,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
 /**
- * Post controller
+ * Message controller
  */
-class PostController extends Controller
+class MessageController extends Controller
 {
     /**
      * @inheritdoc
@@ -39,7 +39,7 @@ class PostController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Entry::find()->where(['is_short' => Entry::IS_SHORT_NO]),
+            'query' => Entry::find()->where(['is_short' => Entry::IS_SHORT_YES]),
         ]);
 
         return $this->render('index', [
@@ -56,7 +56,8 @@ class PostController extends Controller
     {
         $model = new Entry();
         $model->user_id = Yii::$app->user->id;
-        $model->is_short = Entry::IS_SHORT_NO;
+        $model->is_short = Entry::IS_SHORT_YES;
+        $model->name = date("Y-m-d", time());
         $model->status = Entry::STATUS_ACTIVE;
 
         if($model->load(Yii::$app->request->post()) && $model->save()){

@@ -22,17 +22,7 @@ AppAsset::register($this);
             'layout' => 'horizontal',
         ]); ?>
 
-            <?= $form->field($model, 'name')->textInput([
-                'maxlength' => true,
-                'data-ajax' => 'blur',
-                'data-ajax-url' => Url::to(['ajax/get-slug']),
-                'data-ajax-target' => Html::getInputId($model, 'slug')
-            ]) ?>
-            <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
-            <?= $form->field($model, 'category_id')->dropDownList($model->getCategorySelectDatas()) ?>
-            <?= $form->field($model, 'content')->editor() ?>
-            <?= $form->field($model, 'trackback')->textInput(['maxlength' => true]) ?>
-            <?= $form->field($model, 'tags')->tags(['maxlength' => true]) ?>
+            <?= $form->field($model, 'content')->textarea() ?>
             <?= $form->field($model, 'status')->switchery($model::STATUS_ACTIVE) ?>
 
             <div class="form-group">
